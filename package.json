@@ -7,22 +7,21 @@
     "start": "next start"
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.6",
-    "@reduxjs/toolkit": "1.5.0",
-    "@tailwindcss/line-clamp": "^0.2.0",
+    "@heroicons/react": "^2.0.13",
+    "@reduxjs/toolkit": "^1.9.1",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "firebase": "^9.14.0",
-    "next": "latest",
+    "next": "13.0.6",
     "next-auth": "^4.18.0",
-    "react": "17.0.1",
-    "react-currency-formatter": "^1.1.0",
-    "react-dom": "17.0.1",
-    "react-redux": "7.2.2",
-    "react-responsive-carousel": "^3.2.23"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.5"
   },
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.15",
-    "tailwindcss": "^2.1.2"
+    "eslint": "8.29.0",
+    "eslint-config-next": "13.0.6",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4"
   }
 }
