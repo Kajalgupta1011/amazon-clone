@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-import {MenuIcon, SearchIcon, ShoppingCartIcon,} from '@heroicons/react/outline'
 import {signIn, signOut, useSession} from 'next-auth/react';
-
-
-function Header() {
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+export default function Header() {
   return (
     <header>
         {/* Top header */}
@@ -21,7 +21,7 @@ function Header() {
             {/* Search */}
             <div className="hidden sm:flex items-center h-10 rounded-md flex-grow cursor-pointer bg-yellow-400 hover:bg-yellow-500">
               <input className='p-2 h-hull w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4' type="text" placeholder='Search'/>
-              <SearchIcon className='h-12 p-4'/>
+              <SearchOutlinedIcon className='h-12 p-4'/>
             </div>
             {/* Right section of header */}
             <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
@@ -35,7 +35,7 @@ function Header() {
               </div>
               <div className='relative link flex items-center'>
                 <span className='absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold'>0</span>
-                <ShoppingCartIcon className='h-10'/>
+                {/* <ShoppingCartOutlinedIcon className='h-10'/> */}
                 <p className='hidden md:inline font-extrabold md:text-sm mt-2'>Cart</p>
               </div>
             </div>
@@ -43,7 +43,7 @@ function Header() {
         {/* Bottom header */}
         <div className="flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
             <p className='link flex items-center'>
-              <MenuIcon className='h-6 mr-1'/>
+              {/* <MenuOutlinedIcon className='h-6 mr-1'/> */}
               All
             </p>
             <p className='link'>Prime video</p>
@@ -61,5 +61,3 @@ function Header() {
     </header>
   )
 }
-
-export default Header
