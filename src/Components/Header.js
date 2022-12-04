@@ -1,6 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import {MenuIcon, SearchIcon, ShoppingCartIcon,} from '@heroicons/react/outline'
+import {signIn, signOut, useSession} from 'next-auth/react';
+
+
 function Header() {
   return (
     <header>
@@ -22,7 +25,7 @@ function Header() {
             </div>
             {/* Right section of header */}
             <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
-              <div className='link'>
+              <div onClick={signIn} className='link'>
                 <p>Hello Kajal Gupta</p>
                 <p className='font-extrabold md:text-sm '>Account & Lists</p>
               </div>
@@ -43,8 +46,8 @@ function Header() {
               <MenuIcon className='h-6 mr-1'/>
               All
             </p>
-            <p className='link'>Prime Video</p>
-            <p className='link'>Amazon Business</p>
+            <p className='link'>Prime video</p>
+            <p className='link'>Mobiles</p>
             <p className='link'>Today's Deals</p>
             <p className='link hidden lg:inline-flex'>Electronics</p>
             <p className='link hidden lg:inline-flex'>Food & Delivery</p>
