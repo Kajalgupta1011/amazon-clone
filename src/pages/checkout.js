@@ -42,7 +42,6 @@ function checkout() {
                 </div>
             </div>
            
-
             {/* right section */}
             <div>
                     
