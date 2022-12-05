@@ -1,15 +1,22 @@
-import { useSession } from 'next-auth/react'
-import Image from 'next/image'
-import React from 'react'
-import { useSelector } from 'react-redux'
-import CheckOutProduct from '../Components/CheckOutProduct'
-import Header from '../Components/Header'
-import { selectItems, selectTotal } from '../slices/basketSlice'
+import { loadStripe } from '@stripe/stripe-js';
+import { useSession } from 'next-auth/react';
+import Image from 'next/image';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import CheckOutProduct from '../Components/CheckOutProduct';
+import Header from '../Components/Header';
+import { selectItems, selectTotal } from '../slices/basketSlice';
+const stripePromise = loadStripe(process.env.stripe_public_key)
 function checkout() {
 
     const items = useSelector(selectItems);
     const total = useSelector(selectTotal);
     const { data: session } = useSession();
+
+    const createCheckoutSession = () => {
+
+    }
+
   return (
     <div className='bg-gray-100'>
         <Header/>
@@ -56,6 +63,8 @@ function checkout() {
                         </h2>
                         {/* buttons */}
                         <button 
+                            role="link"
+                            onClick={createCheckoutSession}
                             disabled={!session}
                             className={`button mt-2 ${!session && "from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed"}`}
                         >
