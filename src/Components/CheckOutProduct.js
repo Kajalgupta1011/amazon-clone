@@ -5,7 +5,6 @@ import React from 'react'
 function CheckOutProduct({ id, title, price, rating, description, category, image, hasPrime }) {
   return (
     <div className='grid grid-cols-5'>
-        Hello
         <Image
             src={image}
             height={200}
