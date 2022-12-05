@@ -9,6 +9,8 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@material-tailwind/react": "^1.2.4",
+    "@mui/base": "^5.0.0-alpha.108",
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.16",
     "@next/swc-win32-x64-msvc": "^13.0.6",
