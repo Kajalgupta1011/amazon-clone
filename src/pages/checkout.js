@@ -4,10 +4,12 @@ import Image from 'next/image';
 import React from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import Currency from 'react-currency-formatter'
 import { useSelector } from 'react-redux';
 import CheckOutProduct from '../Components/CheckOutProduct';
 import Header from '../Components/Header';
 import { selectItems, selectTotal } from '../slices/basketSlice';
+import Head from 'next/head';
 const stripePromise = loadStripe(process.env.stripe_public_key);
 function checkout() {
 
@@ -19,14 +21,21 @@ function checkout() {
     const createCheckoutSession = async () => {
         const stripe = await stripePromise;
         //call the backend to creat checkout session
-        const checkoutSession = await axios.post('/api/auth/create-checkout-session', {
+        const checkoutSession = await axios.post("/api/create-checkout-session", {
             items: items, 
-            email: session.user.email
+            email: session.user.email,
         });
+        //redirect user/customer to strip checkout
+        const result = await stripe.redirectToCheckout({
+            sessionId: checkoutSession.data.id
+        })
+        if(result.error) alert(result.error.message)
     };
 
   return (
     <div className='bg-gray-100'>
+
+        <Head>Checkout</Head>
         <Header/>
 
         <main className='lg:flex max-w-screen-2xl mx-auto'>
@@ -66,7 +75,7 @@ function checkout() {
                     <>
                         <h2 className='whitespace-nowrap'>Subtotal ({items.length} items):
                         <span className='font-bold'>
-                        {' '}₹ {' '}{total}
+                        <Currency quantity={total} currency='INR' />
                         </span>
                         </h2>
                         {/* buttons */}
