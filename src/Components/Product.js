@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image'
 import Currency from 'react-currency-formatter'
 import StarRateIcon from '@mui/icons-material/StarRate';
 // import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';

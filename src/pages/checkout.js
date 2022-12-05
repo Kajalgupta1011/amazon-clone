@@ -1,6 +1,6 @@
 import { loadStripe } from '@stripe/stripe-js';
 import { useSession } from 'next-auth/react';
-import Image from 'next/image';
+import Image from 'next/legacy/image'
 import React from 'react';
 import axios from 'axios';
 import Link from 'next/link';
@@ -35,7 +35,9 @@ function checkout() {
   return (
     <div className='bg-gray-100'>
 
-        <Head>Checkout</Head>
+        <Head>
+            <title>Checkout</title>
+        </Head>
         <Header/>
 
         <main className='lg:flex max-w-screen-2xl mx-auto'>
