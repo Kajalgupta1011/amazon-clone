@@ -58,7 +58,7 @@ function CheckOutProduct({ id, title, price, rating, description, category, imag
             )}
         </div>
         {/* right add/remove button */}
-        <div className='flex flex-col spacey-2 my-auto justify-self-end'>
+        <div className='flex flex-col space-y-2 my-auto justify-self-end'>
             <button className='button' onClick={addItemToCart}>Add to Cart</button>
             <button className='button' onClick={removeItemToCart}>Remove from Cart</button>
         </div>

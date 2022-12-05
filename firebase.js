@@ -1,5 +1,6 @@
 
-import firebsase from 'firebase';
+import firebsas from 'firebase';
+import firebase from 'firebase/compat/app';
 const firebaseConfig = {
     apiKey: "AIzaSyBscwKyH4NSOqkjdC85-ItzAa36n_ZbWyQ",
     authDomain: "amzn-clone-480c1.firebaseapp.com",
