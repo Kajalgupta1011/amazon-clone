@@ -6,14 +6,17 @@ import { useSelector } from 'react-redux';
 import CheckOutProduct from '../Components/CheckOutProduct';
 import Header from '../Components/Header';
 import { selectItems, selectTotal } from '../slices/basketSlice';
-const stripePromise = loadStripe(process.env.stripe_public_key)
+const stripePromise = loadStripe(process.env.stripe_public_key);
 function checkout() {
 
     const items = useSelector(selectItems);
     const total = useSelector(selectTotal);
     const { data: session } = useSession();
 
-    const createCheckoutSession = () => {
+    const createCheckoutSession = async () => {
+        const stripe = await stripePromise;
+        //call the backend to creat checkout session
+        
 
     }
 
