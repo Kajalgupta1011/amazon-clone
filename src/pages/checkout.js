@@ -15,15 +15,14 @@ function checkout() {
     const total = useSelector(selectTotal);
     const { data: session } = useSession();
 
+
     const createCheckoutSession = async () => {
         const stripe = await stripePromise;
-
         //call the backend to creat checkout session
-        const checkoutSession = await axios.post('/api/create-checkout-session', {
+        const checkoutSession = await axios.post('/api/auth/create-checkout-session', {
             items: items, 
             email: session.user.email
         });
-
     };
 
   return (
