@@ -2,6 +2,8 @@ import { loadStripe } from '@stripe/stripe-js';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import React from 'react';
+import axios from 'axios';
+import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import CheckOutProduct from '../Components/CheckOutProduct';
 import Header from '../Components/Header';
@@ -15,10 +17,14 @@ function checkout() {
 
     const createCheckoutSession = async () => {
         const stripe = await stripePromise;
-        //call the backend to creat checkout session
-        
 
-    }
+        //call the backend to creat checkout session
+        const checkoutSession = await axios.post('/api/create-checkout-session', {
+            items: items, 
+            email: session.user.email
+        });
+
+    };
 
   return (
     <div className='bg-gray-100'>
