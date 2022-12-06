@@ -1,4 +1,3 @@
-
 import {buffer} from 'micro';
 import * as admin from 'firebase-admin';
 
@@ -15,7 +14,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const endpointSecret = process.env.STRIPE_SIGNING_SECRET;
 
 const fulfillOrder = async(session) =>{
-    console.log('fulfilling order', session);
+    console.log('fulfilling order--------------', session);
     console.log('Hello------------');
     return app
     .firestore()
