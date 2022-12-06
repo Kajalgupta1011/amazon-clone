@@ -28,7 +28,7 @@ function checkout() {
         //redirect user/customer to strip checkout
         const result = await stripe.redirectToCheckout({
             sessionId: checkoutSession.data.id
-        })
+        });
         if(result.error) alert(result.error.message)
     };
 
