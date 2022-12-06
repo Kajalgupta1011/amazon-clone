@@ -2,10 +2,14 @@ import React from 'react'
 import Header from '../Components/Header'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 function success() {
     const router = useRouter();
   return (
     <div className='bg-gray-100 h-screen'>
+        <Head>
+            <title>Success</title>
+        </Head>
         <Header/>
         <main className='max-w-screen-lg mx-auto'>
             <div className='felx flex-col p-10 bg-white'>

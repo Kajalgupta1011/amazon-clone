@@ -3,7 +3,6 @@ import { useSession } from 'next-auth/react';
 import Image from 'next/legacy/image'
 import React from 'react';
 import axios from 'axios';
-import Link from 'next/link';
 import Currency from 'react-currency-formatter'
 import { useSelector } from 'react-redux';
 import CheckOutProduct from '../Components/CheckOutProduct';
