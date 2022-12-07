@@ -37,7 +37,7 @@ function CheckOutProduct({ id, title, price, rating, description, category, imag
         {/* middle */}
         <div className="col-span-3 mx-5">
             <p>{title}</p>
-            <div className='felx'>
+            <div className='flex'>
                 {Array(rating).fill().map((_,i)=>(
                     <StarRateIcon key={i} className='h-5 text-yellow-500'/>
                 ))}
@@ -46,7 +46,7 @@ function CheckOutProduct({ id, title, price, rating, description, category, imag
             <p>₹{price}</p>
 
             {hasPrime && (
-                <div className='felx items-center space-x-2'>
+                <div className='flex items-center space-x-2'>
                     <img 
                         loading='lazy'
                         className='w-12'

@@ -15,7 +15,7 @@ export default function Header() {
   
   return (
     <header className='sticky top-0 z-50'>
-        {/* Top header */}
+        {/* Top header---------------------------------------------------------------------------------------------------------------------------------------- */}
         <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
           <div className='mt-2 flex items-center flex-grow sm:flex-grow-0'>
             <Image
@@ -28,13 +28,13 @@ export default function Header() {
                 className='cursor-pointer'
             />
             </div>
-            {/* Search */}
+            {/* Search ---------------------------------------------------------------------------------------------------------------------------------------- */}
             <div className="hidden sm:flex items-center h-10 rounded-md flex-grow cursor-pointer bg-yellow-400 hover:bg-yellow-500">
               <input className='p-2 h-hull w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4' type="text" placeholder='Search'/>
               <SearchOutlinedIcon className=''/>
               
             </div>
-            {/* Right section of header */}
+            {/* Right section of header ---------------------------------------------------------------------------------------------------------------------------------------- */}
             <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
               <div onClick={!session ? signIn : signOut} className='link'>
                 <p className='hover:underline'>
@@ -55,7 +55,7 @@ export default function Header() {
               </div>
             </div>
         </div>
-        {/* Bottom header */}
+        {/* Bottom header---------------------------------------------------------------------------------------------------------------------------------------- */}
         <div className="flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
             <p className='link flex items-center'>
               <MenuOutlinedIcon className='h-6 mr-1'/>

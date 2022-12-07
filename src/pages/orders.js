@@ -8,7 +8,7 @@ import Head from 'next/head';
 
 function Orders({orders}) {
     const {data: session} = useSession();
-    console.log(orders);
+    // console.log(orders);
   return (
     <div>
         <Head>
@@ -71,11 +71,12 @@ export async function getServerSideProps(context){
             timestamp: moment(order.data().timestamp.todate()).unix(),
             items:(
                 await stripe.checkout.sessions.listLineItems(order.id, {
-                    limit: 100
+                    limit: 100,
                 })
             ).data,
         }))
     );
+    console.log(orders);
     
     return {
         props: {

@@ -23,7 +23,7 @@ function Banner() {
             <img loading='lazy' src="https://m.media-amazon.com/images/I/71cQMXCLSvL._SX3000_.jpg" alt="" />
         </div>
         <div>
-          <img src="https://m.media-amazon.com/images/I/61HaxKaBpkL._SX3000_.jpg" alt="" />
+            <img loading='lazy' src="https://m.media-amazon.com/images/I/61HaxKaBpkL._SX3000_.jpg" alt="" />
         </div>
         </Carousel>
     </div>

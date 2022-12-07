@@ -48,7 +48,7 @@ function checkout() {
                 height={250}
                 objectFit='contanin'
                 />
-                <div className='flex felx-col p-5 space-y-10 bg-white'>
+                <div className='flex flex-col p-5 space-y-10 bg-white'>
                     <h1 className='text-3xl border-b pb-4'>
                         {items.length === 0 ? 'Your amazon Cart is empty' : "Shopping Cart" }
                     </h1>
