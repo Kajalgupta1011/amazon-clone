@@ -14,7 +14,6 @@
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.16",
     "@nestjs/axios": "^1.0.0",
-    "@next/swc-win32-x64-msvc": "^13.0.6",
     "@reduxjs/toolkit": "^1.9.1",
     "@stripe/stripe-js": "^1.46.0",
     "@tailwindcss/line-clamp": "^0.4.2",

@@ -71,7 +71,7 @@ function checkout() {
             </div>
            
             {/* right section */}
-            <div className='felx felx-col m-5 bg-white p-10 shadow-md'>
+            <div className='flex flex-col m-5 bg-white p-10 shadow-md'>
                 {items.length > 0 && (
                     <>
                         <h2 className='whitespace-nowrap'>Subtotal ({items.length} items):
